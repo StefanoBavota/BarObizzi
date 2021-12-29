@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="container_icon-close">
+    <ion-icon (click)="onDismiss()" name="close-circle-outline"></ion-icon>
+  </div>
+
+  <div class="container_list">
+    <div class="container_list_type" *ngFor="let product of allProduct" (click)="onTypeSelect(type.typeId)">
+      <p>{{ product.name }}</p>
+      <div class="container_list_type_plus-min">
+
+        <div class="container_list_type_plus-min_add-remove" (click)="onDec(product)">-</div>
+
+        <div class="container_list_type_plus-min_cont">{{ product.quantity }}</div>
+
+        <div class="container_list_type_plus-min_add-remove" (click)="onAdd(product)">+</div>
+      </div>
+    </div>
+  </div>
+  <div class="container_btn">
+    <app-button (click)="onConfirm()">Aggiungi al carrello</app-button>
+  </div>
+  <div class="container_bottom"></div>
+</div>

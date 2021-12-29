@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="container_icon-close">
+    <ion-icon (click)="onDismiss()" name="close-circle-outline"></ion-icon>
+  </div>
+
+  <div class="container_card">
+    <app-order-info [tableId]=tableId [productsList]=productList>
+      <div class="container_card_btn" (click)="onCompleted(tableId)">
+        <app-button>Consegnato</app-button>
+      </div>
+    </app-order-info>
+  </div>
+</div>

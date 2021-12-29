@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="container_icon-close">
+    <ion-icon (click)="dismiss()" name="close-circle-outline"></ion-icon>
+  </div>
+
+  <!-- <div class="container_text">
+    <p class="container_text_message">Nessun ordine pronto</p>
+  </div> -->
+
+  <div class="container_card" *ngFor="let order of ordersList">
+    <app-order-info [tableId]=order.tableId [productsList]=order.productsList>
+      <div class="container_card_btn" (click)="onCompleted(order.tableId)">
+        <app-button>Consegnato</app-button>
+      </div>
+    </app-order-info>
+  </div>
+</div>

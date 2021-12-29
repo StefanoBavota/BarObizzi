@@ -1,0 +1,7 @@
+{
+  "name": "barObizzi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

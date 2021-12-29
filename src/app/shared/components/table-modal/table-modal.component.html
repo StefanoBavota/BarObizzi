@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="container_icon-close">
+    <ion-icon (click)="onDismiss()" name="close-circle-outline"></ion-icon>
+  </div>
+
+  <p class="container_title">Numero tavolo</p>
+  <div class="container_input" [formGroup]="tableNumberForm">
+    <app-input placeholder="Tavolo N°" formControlName="tableId"></app-input>
+  </div>
+
+  <div class="container_btn" (click)="onConfirm()">
+    <app-button color="tertiary">Conferma</app-button>
+  </div>
+</div>

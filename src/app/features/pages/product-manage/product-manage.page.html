@@ -1,0 +1,27 @@
+<ion-header class="header ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="header_btn" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cassa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="container_list">
+      <div class="container_list_type" *ngFor="let product of allProduct">
+        <p>{{ product.name }}</p>
+        <div class="container_list_type_wrap">
+          <ion-icon class="container_list_type_wrap_icon" name="create-outline" (click)="onEdit()"></ion-icon>
+          <ion-icon class="container_list_type_wrap_icon" name="trash-outline" (click)="onDelete()"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD ICON -->
+    <div class="container_add" (click)="onCreate()">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </div>
+  </div>
+</ion-content>

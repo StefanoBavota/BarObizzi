@@ -1,0 +1,40 @@
+.header {
+  height: 10%;
+  background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  ion-toolbar {
+    --background: var(--light-grey);
+  }
+
+  &_btn {
+    --color: var(--black);
+    --background: var(--light-grey);
+    font-size: 20px;
+  }
+
+  ion-title {
+    background-color: var(--light-grey);
+    color: black;
+    font-size: 25px;
+  }
+}
+
+.container {
+  background-color: var(--white-grey);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_setting {
+    font-size: 60px;
+    color: var(--black);
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+  }
+}

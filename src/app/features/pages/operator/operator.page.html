@@ -1,0 +1,31 @@
+<ion-header class="header ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="header_btn" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Operatore</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- NOTIFICATION ICON -->
+  <div class="container">
+    <div class="container_notification" (click)="showOrders()">
+      <ion-icon name="notifications-circle-outline"></ion-icon>
+    </div>
+    <div class="container_number" *ngIf="ordersNumber !== 0">{{ ordersNumber }}</div>
+
+    <!-- BODY -->
+    <!-- <div class="container_body">
+      <p class="container_body_text">Non ci sono tavoli disponibili...</p>
+    </div> -->
+    <div class="container_wrap">
+      <div class="container_wrap_table" *ngFor="let order of ordersList" (click)="onSelectTable(order)">Tavolo n° {{ order.tableId }}</div>
+    </div>
+
+    <!-- ADD ICON -->
+    <div class="container_add" (click)="newOrder()">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </div>
+  </div>
+</ion-content>

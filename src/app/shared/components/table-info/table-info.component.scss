@@ -1,0 +1,35 @@
+.container {
+  background-color: var(--white-grey);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_icon-close {
+    width: 100%;
+    text-align: right;
+    padding-top: 2%;
+    padding-right: 2%;
+
+    ion-icon {
+      color: var(--black);
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &_card {
+    width: 80%;
+    min-height: 70%;
+    margin-top: 5%;
+
+    &_btn {
+      min-width: 40%;
+      height: 20%;
+      float: right;
+      margin-right: 2%;
+      margin-top: 2%;
+    }
+  }
+}
