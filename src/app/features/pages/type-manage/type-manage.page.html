@@ -11,8 +11,12 @@
   <div class="container">
 
     <div class="container_list">
-      <div class="container_list_type" *ngFor="let type of typeChoiceList" (click)="onTypeSelect(type.typeId)">
-        <p>{{ type.name }}</p>
+      <div class="container_list_type" *ngFor="let type of typeChoiceList">
+        <p (click)="onTypeSelect(type.typeId)">{{ type.name }}</p>
+        <div class="container_list_type_wrap">
+          <ion-icon class="container_list_type_wrap_icon" name="create-outline" (click)="onEdit(type.typeId)"></ion-icon>
+          <ion-icon class="container_list_type_wrap_icon" name="trash-outline" (click)="onDelete()"></ion-icon>
+        </div>
       </div>
     </div>
 

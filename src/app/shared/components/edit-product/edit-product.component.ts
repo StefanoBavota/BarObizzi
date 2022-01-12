@@ -11,12 +11,14 @@ import { ProductManageService } from 'src/app/features/pages/product-manage/serv
 })
 export class EditProductComponent implements OnInit {
   typeId: number;
+  productId: number;
   editProductForm: FormGroup;
   product: IProduct;
 
   constructor(private modalController: ModalController, private formBuilder: FormBuilder, private productManageService: ProductManageService) { }
 
   ngOnInit() {
+    //TODO: call product by productId
     this.productManageService.getProductById().subscribe((res: IProduct) => {
       this.product = res;
 
@@ -31,6 +33,7 @@ export class EditProductComponent implements OnInit {
   onConfirm() {
     if (this.editProductForm.valid) {
       let data: IProduct = {
+        productId: this.productId,
         name: this.editProductForm.value.name,
         description: this.editProductForm.value.description,
         price: this.editProductForm.value.price,

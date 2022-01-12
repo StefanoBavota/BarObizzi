@@ -9,6 +9,7 @@ import { TypeManagePageRoutingModule } from './type-manage-routing.module';
 import { TypeManagePage } from './type-manage.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AddTypeComponent } from 'src/app/shared/components/add-type/add-type.component';
+import { EditTypeComponent } from 'src/app/shared/components/edit-type/edit-type.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,6 @@ import { AddTypeComponent } from 'src/app/shared/components/add-type/add-type.co
     SharedModule,
     ReactiveFormsModule
   ],
-  declarations: [TypeManagePage, AddTypeComponent]
+  declarations: [TypeManagePage, AddTypeComponent, EditTypeComponent]
 })
 export class TypeManagePageModule {}

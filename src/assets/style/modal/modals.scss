@@ -61,3 +61,11 @@
     border-radius: 15px;
   }
 }
+
+.edit-type {
+  &::part(content) {
+    max-height: 25%;
+    max-width: 85%;
+    border-radius: 15px;
+  }
+}

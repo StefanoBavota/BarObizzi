@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { AddTypeComponent } from 'src/app/shared/components/add-type/add-type.component';
+import { EditTypeComponent } from 'src/app/shared/components/edit-type/edit-type.component';
 import { IType } from '../type-choice/interfaces/type-choice.interface';
 import { TypeChoiceService } from '../type-choice/services/type-choice.service';
 
@@ -28,6 +29,21 @@ export class TypeManagePage implements OnInit {
 
   onTypeSelect() {
     this.router.navigate(["/product-manage"])
+  }
+
+  async onEdit(typeId: number) {
+    const modal = await this.modalController.create({
+      component: EditTypeComponent,
+      cssClass: 'edit-type',
+      componentProps: {
+        typeId: typeId,
+      },
+    });
+    return await modal.present();
+  }
+
+  onDelete() {
+    console.log("Deleted")
   }
 
   async addType() {

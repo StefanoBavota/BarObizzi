@@ -13,7 +13,7 @@
       <div class="container_list_type" *ngFor="let product of allProduct">
         <p>{{ product.name }}</p>
         <div class="container_list_type_wrap">
-          <ion-icon class="container_list_type_wrap_icon" name="create-outline" (click)="onEdit()"></ion-icon>
+          <ion-icon class="container_list_type_wrap_icon" name="create-outline" (click)="onEdit(product.productId)"></ion-icon>
           <ion-icon class="container_list_type_wrap_icon" name="trash-outline" (click)="onDelete()"></ion-icon>
         </div>
       </div>

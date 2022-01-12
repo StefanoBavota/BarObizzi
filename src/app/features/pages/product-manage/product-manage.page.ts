@@ -26,12 +26,13 @@ export class ProductManagePage implements OnInit {
     })
   }
 
-  async onEdit() {
+  async onEdit(productId: number) {
     const modal = await this.modalController.create({
       component: EditProductComponent,
       cssClass: 'edit-product',
       componentProps: {
         typeId: this.typeId,
+        productId: productId,
       },
     });
     return await modal.present();
